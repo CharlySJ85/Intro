@@ -18,16 +18,26 @@
         }
     </style>
     <script>
+        var colorCounter = 0;
         var colorArray = ["red", "blue", "green"]; 
         function clickMe(){
-            alert("Hola");
+            //alert("Hola");
+            var paragraph = document.getElementById("mainParagraphId");
+            paragraph.style.backgroundColor = colorArray[colorCounter];
+            if (colorCounter === 2) {
+                colorCounter = 0;
+            }
+            else{
+                colorCounter++;
+            }
+            
         }
     </script>
     <title>Intro to html</title>
 </head>
 <body>
     <h3 class="h3Element">paragraph heading</h3>
-    <p class="mainParagraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eius ratione dolore quis porro repellendus dolores qui autem? Placeat, facilis voluptates explicabo illo dignissimos repellendus itaque eos laudantium alias, commodi inventore, pariatur magni? Voluptatibus cum eaque nostrum, unde possimus ab natus officiis magni tempore at cumque facere esse veritatis praesentium aperiam, facilis quaerat maiores recusandae repellat cupiditate sunt. Sunt alias earum exercitationem. Sapiente earum corrupti exercitationem molestias dicta laboriosam voluptatum distinctio unde, numquam error? Commodi dolores impedit distinctio eius incidunt sint at esse natus aperiam. Quibusdam iste, laboriosam ipsa tenetur labore incidunt necessitatibus eligendi id magnam. Dolor ab sint labore. Dolores ipsam placeat vel, nam debitis quia, nihil ea hic architecto tempore amet perferendis, molestias iste commodi officia fugit provident quaerat consequatur consectetur! Deserunt necessitatibus vel assumenda dolorum repellendus omnis, dolor quod accusantium voluptatibus, architecto quos provident. Ratione dolores ipsum veritatis animi id. Debitis, optio! Vitae reiciendis quis minus fugit eius, laborum earum eum? Eos dolore quaerat ipsam similique, iusto, illo dolorum architecto maxime veritatis possimus maiores voluptatum, pariatur dignissimos! Veritatis sunt eum aliquid pariatur necessitatibus libero asperiores delectus, voluptatibus voluptatum! Vel distinctio eum hic temporibus nobis! Nihil, sequi accusamus cumque repellendus vel asperiores, qui pariatur necessitatibus nemo cum earum!</p>
+    <p class="mainParagraph" id="mainParagraphId">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eius ratione dolore quis porro repellendus dolores qui autem? Placeat, facilis voluptates explicabo illo dignissimos repellendus itaque eos laudantium alias, commodi inventore, pariatur magni? Voluptatibus cum eaque nostrum, unde possimus ab natus officiis magni tempore at cumque facere esse veritatis praesentium aperiam, facilis quaerat maiores recusandae repellat cupiditate sunt. Sunt alias earum exercitationem. Sapiente earum corrupti exercitationem molestias dicta laboriosam voluptatum distinctio unde, numquam error? Commodi dolores impedit distinctio eius incidunt sint at esse natus aperiam. Quibusdam iste, laboriosam ipsa tenetur labore incidunt necessitatibus eligendi id magnam. Dolor ab sint labore. Dolores ipsam placeat vel, nam debitis quia, nihil ea hic architecto tempore amet perferendis, molestias iste commodi officia fugit provident quaerat consequatur consectetur! Deserunt necessitatibus vel assumenda dolorum repellendus omnis, dolor quod accusantium voluptatibus, architecto quos provident. Ratione dolores ipsum veritatis animi id. Debitis, optio! Vitae reiciendis quis minus fugit eius, laborum earum eum? Eos dolore quaerat ipsam similique, iusto, illo dolorum architecto maxime veritatis possimus maiores voluptatum, pariatur dignissimos! Veritatis sunt eum aliquid pariatur necessitatibus libero asperiores delectus, voluptatibus voluptatum! Vel distinctio eum hic temporibus nobis! Nihil, sequi accusamus cumque repellendus vel asperiores, qui pariatur necessitatibus nemo cum earum!</p>
     <button onclick="clickMe()">
         Color
     </button>
